@@ -1,0 +1,71 @@
+
+/* 1. Les boutons sont côte à côte */
+/* Erreur : display: flex doit être appliqué au parent des boutons, pas aux boutons eux-mêmes. */
+.boutons {
+    display: flex;
+}
+
+/* 2. L’icône et le titre sont alignés au centre verticalement */
+/* Erreur : justify-content centre horizontalement ; il faut utiliser align-items pour l'axe vertical. */
+.entete {
+    display: flex;
+    align-items: center;
+}
+
+/* 3. Les cartes passent à la ligne quand la place manque */
+/* Erreur : il manque flex-wrap: wrap pour autoriser le retour à la ligne. */
+.cartes {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cartes div {
+    flex: 0 0 250px;
+}
+
+/* 4. Le champ de recherche prend toute la place restante */
+/* Erreur : flex-grow: 0 empêche le champ de grandir ; il faut flex-grow: 1. */
+.recherche {
+    display: flex;
+    flex: 1;
+}
+
+.recherche input {
+    flex-grow: 1;
+}
+
+/* 5. Les liens du menu latéral sont empilés, espacés de 1rem */
+/* Erreur : flex-direction est row par défaut ; il faut utiliser column. */
+.lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* 6. Le lien Déconnexion est poussé tout à droite de la barre */
+/* Erreur : margin-right: auto pousse les éléments suivants, pas Déconnexion à droite. */
+.barre {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.deconnexion {
+    margin-left: auto;
+}
+
+/* 7. Le logo ne doit jamais rétrécir */
+/* Erreur : flex-shrink: 1 autorise la réduction ; il faut mettre 0. */
+.logo {
+    width: 60px;
+    flex-shrink: 0;
+}
+
+/* 8. Les étiquettes sont centrées horizontalement */
+/* Erreur : align-items centre verticalement ; il faut utiliser justify-content. */
+.etiquettes {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}

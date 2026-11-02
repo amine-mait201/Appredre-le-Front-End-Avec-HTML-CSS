@@ -1,0 +1,144 @@
+/* Appliquer box-sizing à tous les éléments */
+* {
+    box-sizing: border-box;
+}
+
+/* Style général de la page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Main centré avec une largeur maximale de 1000px */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+/* 2. En-tête */
+
+.entete {
+    display: flex;
+    align-items: center;
+    background-color: #102a43;
+    padding: 1rem;
+}
+
+/* Logo */
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+/* Panier poussé à droite */
+.panier {
+    margin-left: auto;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* 3. Menu */
+
+.menu {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* 4. Cartes des plats */
+
+.plats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.plat {
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 5. Style des cartes et des images */
+
+.plat {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.plat img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* 6. Hauteur des cartes et pied collé en bas */
+
+.plat {
+    display: flex;
+    flex-direction: column;
+}
+
+.plat p {
+    flex-grow: 1;
+    padding: 0 1rem;
+}
+
+.plat h2 {
+    padding: 0 1rem;
+}
+
+.pied {
+    display: flex;
+    margin-top: auto;
+    padding: 1rem;
+}
+
+
+/* 7. Prix à gauche et bouton à droite */
+
+.pied {
+    display: flex;
+    align-items: center;
+}
+
+.ajouter {
+    margin-left: auto;
+    background-color: #1677c8;
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+}
+
+/* 8. Responsive */
+.entete {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-left: 0;
+    }
+
+    .panier {
+        margin-left: auto;
+    }
